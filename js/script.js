@@ -26,13 +26,13 @@ removeDiv()
 
 // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
 
-function alertName(){
-    const name = document.querySelectorAll("main div.blog-post p.blog-post-meta a")
-    console.log(name);
+function showAlert(){
+    alert("Saluta l'autore dell'articolo! :)")
+}
 
-    name.addEventListener("mouseover", function(){
-        alert("Saluta l'autore del post!");
-    }) ;
+function alertName(){
+    const name = document.querySelectorAll("main div.blog-post p.blog-post-meta a");
+    name.addEventListener("mouseover", showAlert());
 }
 
 alertName();
